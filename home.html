@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Creator - Homepage</title>
+
+    <!-- Add your own styles or link to a stylesheet -->
+    <link rel="stylesheet" href="home.css">
+
+    <!-- Add any additional meta tags, scripts, or other head content here -->
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <img src="img/logo.png" class="logo" alt="Blog Creator Logo">
+        <ul class="links-container">
+            <li class="link-item"><a target="_blank" href="#" class="link">Home</a></li>
+            <li class="link-item"><a target="_blank" href="editor.html" class="link">Editor</a></li>
+            <!-- Add more navigation links as needed -->
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <header class="hero">
+        <h1>Welcome to Blog Creator</h1>
+        <p>Create and Manage Your Own Blogs Easily</p>
+        <a target="_blank" href="editor.html" class="btn">Get Started</a>
+    </header>
+
+    <section class="preview">
+        <h2>Featured Blogs</h2>
+        <div class="featured-blog-container" id="featuredBlogContainer">
+            <!-- Featured blog posts will be dynamically added here -->
+        </div>
+    </section>
+    <!-- Include this script just before the closing </body> tag -->
+<script>
+    const featuredBlogContainer = document.getElementById('featuredBlogContainer');
+
+    // Sample data for featured blogs (you can replace this with your data)
+    const featuredBlogs = [
+        {
+            title: 'Chandrayaan 3: Vikram Lander, Pragyan rover begin operation, updates ISRO',
+            content: 'Chandrayaan-3 is Indias planned lunar mission, intended to follow the successful Chandrayaan-1 and Chandrayaan-2 missions. The Chandrayaan-3 mission is focused on achieving a soft landing on the Moons surface, similar to Chandrayaan-2, but with a specific focus on the lander and rover components.Chandrayaan-3 consists of an indigenous Lander module (LM), Propulsion module (PM) and a Rover with an objective of developing and demonstrating new technologies required for Inter planetary missions. The Lander will have the capability to soft land at a specified lunar site and deploy the Rover which will carry out in-situ chemical analysis of the lunar surface during the course of its mobility. The Lander and the Rover have scientific payloads to carry out experiments on the lunar surface. The main function of PM is to carry the LM from launch vehicle injection till final lunar 100 km circular polar orbit and separate the LM from PM. Apart from this, the Propulsion Module also has one scientific payload as a value addition which will be operated post separation of Lander Module. The launcher identified for Chandrayaan-3 is LVM3 M4 which will place the integrated module in an Elliptic Parking Orbit (EPO) of size ~170 x 36500 km.',
+            image: 'img/blog1.jpg',
+            link: 'blog1.html'
+        },
+        {
+            title: 'British officials say AI chatbots could carry cyber risks',
+            content: 'British officials are warning organisations about integrating artificial intelligence-driven chatbots into their businesses, saying that research has increasingly shown that they can be tricked into performing harmful tasks.OpenAI comes from industry experts who want to bring AI to the masses. Its linked to the non-profit research company OpenAI, co-chaired by Elon Musk and Sam Altman, and sponsored by companies such as Amazon Web Services, Microsoft, and Infosys who are trying to make AI accessible—hence. Contributors discuss their collective efforts to promote and advance AI technologies through long-term research. Its a valuable resource for anyone interested in the future of AI. ',
+            image: 'img/blog2.jpg',
+            link: 'blog2.html'
+        },
+        // Add more blog entries as needed
+    ];
+
+    // Function to create a featured blog preview
+    function createFeaturedBlogPreview(blog) {
+        const blogPreview = document.createElement('div');
+        blogPreview.classList.add('featured-blog-preview');
+        blogPreview.innerHTML = `
+            <img src="${blog.image}" alt="${blog.title}" class="blog-image">
+            <h3 class="blog-title">${blog.title}</h3>
+            <p class="blog-content">${blog.content}</p>
+            <a href="https://www.hindustantimes.com/technology/chandrayaan-3-vikram-lander-pragyan-rover-begins-operations-updates-isro-101692883181536.html{blog.link}" class="read-more">Read More</a>
+        `;
+        return blogPreview;
+    }
+
+    // Populate the featured blogs section
+    featuredBlogs.forEach(blog => {
+        const blogPreview = createFeaturedBlogPreview(blog);
+        featuredBlogContainer.appendChild(blogPreview);
+    });
+</script>
+
+    
+
+    <section class="about">
+        <h2>About Us</h2>
+        <p>Learn about our mission and how we make blogging simple.</p>
+        <!-- Add more information about your platform here -->
+    </section>
+
+    <!-- Add more sections, footer, or other content as needed -->
+
+</body>
+</html>

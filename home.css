@@ -1,0 +1,170 @@
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 0.5rem 1rem;
+    color: white;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+}
+
+.links-container {
+    list-style: none;
+    display: flex;
+}
+
+.link-item {
+    margin-right: 1rem;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: #ebc90b;
+}
+
+/* Hero section */
+.hero {
+    background-image: url('https://img.freepik.com/free-photo/psychedelic-paper-shapes-with-copy-space_23-2149378246.jpg?w=900&t=st=1692862094~exp=1692862694~hmac=e371fef6d56ffa14c612afa8d6bb1b320d3d0d39d5ffe301cef89d206ff336aa');
+    background-size: cover;
+    text-align: center;
+    padding: 5rem;
+    color: rgb(20, 18, 18);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #f39c12;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #4d0f07;
+}
+
+/* Featured blogs section */
+.blogs-section{
+    width: 90%;
+    padding: 50px 5vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 80px;
+}
+
+.blog-image{
+    width: 900px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.blog-overview{
+    margin: 10px 0 20px;
+    line-height: 30px;
+}
+
+.btn.dark{
+    background: #f8d303;
+    color: #130101;
+}
+.btn:hover {
+    background-color: #f15d07;
+}
+
+/* About section */
+.about {
+    background-color: rgb(6, 8, 0);
+    padding: 3rem;
+    text-align: center;
+}
+
+.about h2 {
+    text-decoration: none;
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.about p {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+}
+/* Add this CSS to your existing stylesheet */
+.featured-blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.featured-blog-preview {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.blog-image {
+    max-width: 100%;
+    height: 50%;
+    border-radius: 5px;
+}
+
+.blog-title {
+    margin-top: 10px;
+    font-size: 1.25rem;
+}
+
+.blog-content {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 5px 10px;
+    background-color: #333;
+    color: rgba(228, 226, 211, 0.932);
+    text-decoration: none;
+    border-radius: 3px;
+}

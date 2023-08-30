@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Content Management Tool</title>
+    <link rel="stylesheet" href="editor.css">
+    <script src="editor.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="img/logo.png" class="logo" alt="Blog Creator Logo">
+        <ul class="links-container">
+            <li class="link-item"><a target="_blank" href="home.html" class="link">Home</a></li>
+            <li class="link-item"><a target="_blank" href="editor.html" class="link">Editor</a></li>
+            <!-- Add more navigation links as needed -->
+        </ul>
+    </nav>
+
+    <main>
+      
+        <div class="card">
+            <div class="input-section">
+              <b><label class="label-section" for="title">Title:</label></b>
+              <input class="div-section" type="text" id="title" placeholder="Enter title">
+            </div>
+            
+            <div class="input-section">
+              <b><label class="label-section" for="content">Content:</label></b>
+              <input class="div-section" aria-colspan="100" type="text" id="content" placeholder="Enter content">
+            </div>
+        
+            <div class="input-section">
+              <b><label class="label-section" for="image">Image:</label></b>
+              <input type="file" id="image" accept="image/*">
+            </div>
+        
+            <div class="input-section">
+              <b><label class="label-section" for="video">Video:</label></b>
+              <input type="file" id="video" accept="video/*">
+            </div>
+          </div>
+          <div class="button-section">
+            <button onclick="submitForm()">Submit</button>
+          </div>
+        
+          <div class="data-container">
+            <div class="data-section" id="dataSection">
+            </div>
+          </div>
+    </main>
+</body>
+</html>
